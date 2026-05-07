@@ -1,15 +1,55 @@
 import TodoForm from '../components/TodoForm';
 import TodoList from '../components/TodoList';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, Box, Paper } from '@mui/material';
 
 export default function Home() {
   return (
-    <Container maxWidth="sm" style={{ marginTop: 40 }}>
-     <Typography variant="h4" gutterBottom color="text.primary">
-  Todo App
-</Typography>
-      <TodoForm />
-      <TodoList />
+    <Container maxWidth="sm">
+      <Box
+        sx={{
+          mt: 8,
+          textAlign: 'center'
+        }}
+      >
+        {/* Title */}
+        <Typography
+          variant="h3"
+          fontWeight="bold"
+          gutterBottom
+          sx={{
+            background: 'linear-gradient(90deg, #1976d2, #42a5f5)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}
+        >
+          📝 Todo App
+        </Typography>
+
+        <Typography gutterBottom
+          sx={{
+            background: 'linear-gradient(90deg, #1976d2, #42a5f5)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent'
+          }}>
+          Stay organized and boost your productivity
+        </Typography>
+
+        {/* Card Wrapper */}
+        <Paper
+          elevation={4}
+          sx={{
+            p: 3,
+            borderRadius: 3,
+            backdropFilter: 'blur(10px)'
+          }}
+        >
+          <TodoForm />
+
+          <Box mt={3}>
+            <TodoList />
+          </Box>
+        </Paper>
+      </Box>
     </Container>
   );
 }

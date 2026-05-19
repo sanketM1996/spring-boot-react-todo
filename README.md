@@ -1,4 +1,4 @@
-###to run locally
+### to run locally
 ```bash
 docker compose up
 ```

@@ -22,7 +22,7 @@ export default function Home() {
             WebkitTextFillColor: 'transparent'
           }}
         >
-          📝 Todo App
+          📝 Todo App -version 2.0.0
         </Typography>
 
         <Typography gutterBottom
